@@ -1,0 +1,26 @@
+{
+  "name": "RockPaperFireball",
+  "version": "1.0.0",
+  "description": "## A new take on the classic game \"Rock, Paper, Scissors.\"",
+  "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/mentalgrinds/rock-paper-fireball.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mentalgrinds/rock-paper-fireball/issues"
+  },
+  "homepage": "https://github.com/mentalgrinds/rock-paper-fireball",
+  "devDependencies": {
+    "chai": "^1.10.0",
+    "mocha": "^2.1.0"
+  }
+}
