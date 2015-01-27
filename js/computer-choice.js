@@ -3,6 +3,8 @@ function determineWinner (playerChoice) {
   var choices = ['rock', 'paper', 'fireball'];
   var compChoice = choices[generate()];
 
+  // if (arguments[1]) {};
+
   var resultStatement;
 
   switch (playerChoice) {
