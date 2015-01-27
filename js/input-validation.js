@@ -1,15 +1,22 @@
 
-function inputValidation () {
+function inputValidation (userInput) {
 
-  
-
-  if (choices === null || choices === "") {
-
-    alert("Please enter valid choice: ex. paper, rock, fireball");
-  
-  } else {
-
-  return choices.toLowerCase();
-  }
+  if (userInput === undefined || typeof userInput !== "string") {
+    return "Please enter valid choice: ex. paper, rock, fireball";
 }
-console.log (inputValidation());
+    var inputString = userInput.toLowerCase();
+  
+    if (inputString === "p" || inputString === "paper") {
+    return "paper";
+  
+  } else if (inputString === "r" || inputString === "rock"){
+    return "rock";
+  
+  } else if (inputString === "f" || inputString === "fireball" || inputString === "fire ball"){
+    return "fireball";
+  
+  }
+
+}
+
+//console.log (inputValidation());
