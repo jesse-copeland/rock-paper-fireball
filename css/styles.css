@@ -25,7 +25,7 @@ body {
 }
 
 .background {
-  background: url(../images/diamond-bg.svg) repeat fixed top left, #e5e5e5;
+  background: url(../images/dark-triangles.png) repeat fixed top left, #e5e5e5;
   background-attachment: fixed;
 }
 
@@ -34,7 +34,7 @@ body {
   max-width: 500px;
   min-height: 400px;
   margin: 3em auto;
-  background: #053064;
+  background: url(../images/congruent_pentagon.png) repeat, #053064;
 }
 
 .game-title {
