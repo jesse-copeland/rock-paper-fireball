@@ -1,80 +1,29 @@
 <!DOCTYPE html>
+<html lang="en">
+  
 <head>
   <meta charset="UTF-8">
-  <link href="">
-  <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
-
   <title> Rock Paper FIREBALL </title>
-  <script src=""></script>
-  <script language="javascript">
-
-<!User prompt and comparison functions: http://stackoverflow.com/questions/17976883/rock-paper-scissors-in-javascript
-  <body>
-
-  var userPrompt = prompt("Rock, paper or....FIREBALL?!");
-  var userChoice = ["rock", "paper", "fireball"]; 
-  var compChoice = Math.random();
-
-    if (compChoice < 0.34)  {
-        compChoice = "rock"; {
-
-        }else if (compChoice <= 0.67) {
-          compChoice = "paper"; {
-
-          }else compChoice = "fireball";
-
-        }
-    var compare = function (userChoice, compChoice) {
-      if (compChoice === userChoice) {
-        alert ("Tie");
-      } if (userChoice === "rock") {
-        if (compChoice === "scissors") {
-          alert ("ROCK WINS";)
-        } else {
-          alert ("paper wins");
-        }
-      }
-    }
-    if (userChoice === "paper") {
-      if (compChoice === "rock") {
-        alert ("paper wins");
-
-      } else {
-        if (compChoice === "scissors") {
-          alert("scissors wins");
-        }
-      }
-      if (userChoice === "scissors") {
-        if (compChoice === "rock") {
-          alert ("rock wins!");
-
-        }else {
-          if (compChoice === "paper") {
-            alert ("scissors wins!");
-
-          }
-        }
-      }
-    }
-    };
-
-    console.log ("User choice " + userChoice);
-    console.log ("Computer choice " + compChoice);
-    compare(userChoice, compChoice);
-
-</script>
- 
+  <link rel="stylesheet" href="./node_modules/mocha/mocha.css">
+  <script src="/node_modules/mocha/mocha.js"></script>
+  <script src="/node_modules/chai/chai.js"></script>
+  <script>
+    mocha.setup('bdd');
+    mocha.reporter('html');
+    expect = chai.expect;
+    should = chai.should();
+  </script>
+  
+  <script src="js/computer-choice.js"></script>
+  <script src="test/test-computer-choice.js"></script>
+  
 </head>
-
-  
-
-
-
- 
- 
-  
-
-  <header> </header>
-
-  </body>
-  </html>
+<body>
+  <div id="mocha">
+    <script>
+    mocha.run();
+    </script>
+  </div>
+    
+</body>
+</html>
