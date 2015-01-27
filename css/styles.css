@@ -41,6 +41,16 @@ body {
   text-align: center;
 }
 
+.hidden {
+  display: none;
+}
+
+.results {
+  height: 200px;
+  width: 100%;
+  text-align: center;
+}
+
 #mocha {
   padding: 10px;
   background: #033207;

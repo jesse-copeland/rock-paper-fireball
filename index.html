@@ -15,9 +15,10 @@
     should = chai.should();
   </script>
   
-  <script src="js/computer-choice.js"></script>
-  <script src="test/test-computer-choice.js"></script>
   
+  <script src="test/test-computer-choice.js"></script>
+  <script src="test/test-input-validation.js"></script>
+
 </head>
 <body>
   <div id="mocha">
@@ -28,7 +29,16 @@
 
   <div class="container">
     <h1 class="game-title">Rock, Paper, Fireball</h1>
-    <form action=""></form>
+    <form action="#" id="PlayerInputForm">
+    <label for="PlayersChoice">Enter rock, paper or fireball</label>
+      <input type="text" id="PlayersChoice" name="PlayersChoice">
+      <input type="submit" name="SubmitChoice" value="Play!">
+    </form>
+    <div id="results" class="hidden"></div>
   </div>
+  <script src="js/computer-choice.js"></script>
+  <script src="js/input-validation.js"></script>
+  <script src="js/process-form.js"></script>
+
 </body>
 </html>
