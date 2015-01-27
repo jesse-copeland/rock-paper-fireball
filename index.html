@@ -6,18 +6,12 @@
 
   <title> Rock Paper FIREBALL </title>
   <script src=""></script>
-  <script language="javascript"></script>
-
-
- 
-
-
-  </head>
+  <script language="javascript">
 
 <!User prompt and comparison functions: http://stackoverflow.com/questions/17976883/rock-paper-scissors-in-javascript
   <body>
 
-  var userPrompt = ("Rock, paper or....FIREBALL?!");
+  var userPrompt = prompt("Rock, paper or....FIREBALL?!");
   var userChoice = ["rock", "paper", "fireball"]; 
   var compChoice = Math.random();
 
@@ -32,14 +26,49 @@
         }
     var compare = function (userChoice, compChoice) {
       if (compChoice === userChoice) {
-        return ("Tie");
+        alert ("Tie");
       } if (userChoice === "rock") {
         if (compChoice === "scissors") {
-          return ("ROCK WINS";)
-        } else
+          alert ("ROCK WINS";)
+        } else {
+          alert ("paper wins");
+        }
       }
     }
+    if (userChoice === "paper") {
+      if (compChoice === "rock") {
+        alert ("paper wins");
+
+      } else {
+        if (compChoice === "scissors") {
+          alert("scissors wins");
+        }
+      }
+      if (userChoice === "scissors") {
+        if (compChoice === "rock") {
+          alert ("rock wins!");
+
+        }else {
+          if (compChoice === "paper") {
+            alert ("scissors wins!");
+
+          }
+        }
+      }
     }
+    };
+
+    console.log ("User choice " + userChoice);
+    console.log ("Computer choice " + compChoice);
+    compare(userChoice, compChoice);
+
+</script>
+ 
+</head>
+
+  
+
+
 
  
  
