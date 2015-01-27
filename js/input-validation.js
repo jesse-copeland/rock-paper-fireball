@@ -2,8 +2,10 @@
 function inputValidation (userInput) {
 
   if (userInput === undefined || typeof userInput !== "string") {
-    return "Please enter valid choice: ex. paper, rock, fireball";
-}
+    var stringStub = '>';
+    return stringStub + userInput + '<'; 
+  }
+
     var inputString = userInput.toLowerCase();
   
     if (inputString === "p" || inputString === "paper") {
@@ -12,11 +14,9 @@ function inputValidation (userInput) {
   } else if (inputString === "r" || inputString === "rock"){
     return "rock";
   
-  } else if (inputString === "f" || inputString === "fireball" || inputString === "fire ball"){
+  } else if (inputString === "f" || inputString === "fireball" || inputString === "fire ball" || inputString === "fire"){
     return "fireball";
   
   }
 
 }
-
-//console.log (inputValidation());

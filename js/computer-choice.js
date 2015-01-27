@@ -3,43 +3,89 @@ function determineWinner (playerChoice) {
   var choices = ['rock', 'paper', 'fireball'];
   var compChoice = choices[generate()];
 
-  if (arguments[1]) { compChoice = arguments[1];}
-
-  var resultStatement;
+  var resultObj = {
+    message: function () {
+      return this.winner + ' wins!, ' + this.winningChoice + ' ' + this.wonBy + ' ' + this.losingChoice + '.';
+    },
+    winnerBg: function () {
+      var bgImage;
+      if (this.winningChoice === 'paper') {
+        bgImage = 'paper.png';
+      } else if (this.winningChoice === 'rock') {
+        bgImage = 'rock-seamless.jpg';
+      } else if (this.winningChoice === 'fireball') {
+        bgImage = 'fire-seamless.jpg';
+      } else {
+        bgImage = 'congruent_pentagon.png';
+      }
+      return bgImage;
+    }
+  };
 
   switch (playerChoice) {
     case  'rock':
       if (compChoice === 'paper') {
-        resultStatement = 'computer wins, paper covers rock.';
+        resultObj.winner = 'computer';
+        resultObj.winningChoice = 'paper';
+        resultObj.losingChoice = 'rock';
+        resultObj.wonBy = 'covers';
       } else if (compChoice === 'fireball') {
-        resultStatement = 'player wins, rock blocks fireball.';
+        resultObj.winner = 'player';
+        resultObj.winningChoice = 'rock';
+        resultObj.losingChoice = 'fireball';
+        resultObj.wonBy = 'blocks';
       } else {
-        resultStatement = 'Draw, both chose rock.';
+        resultObj.winner = 'Draw, neither side';
+        resultObj.winningChoice = 'rock';
+        resultObj.losingChoice = 'rock';
+        resultObj.wonBy = 'matches';
       }
       break;
     case 'paper':
       if (compChoice === 'rock') {
-        resultStatement = 'player wins, paper covers rock';
+        resultObj.winner = 'player';
+        resultObj.winningChoice = 'paper';
+        resultObj.losingChoice = 'rock';
+        resultObj.wonBy = 'covers';
       } else if (compChoice === 'fireball') {
-        resultStatement = 'computer wins, fireball burns paper';
+        resultObj.winner = 'computer';
+        resultObj.winningChoice = 'fireball';
+        resultObj.losingChoice = 'paper';
+        resultObj.wonBy = 'burns';
       } else {
-        resultStatement = 'Draw, both chose paper.';
+        resultObj.winner = 'Draw, neither side';
+        resultObj.winningChoice = 'paper';
+        resultObj.losingChoice = 'paper';
+        resultObj.wonBy = 'matches';
       }
       break;
     case 'fireball':
       if (compChoice === 'rock') {
-        resultStatement = 'computer wins, rock blocks fireball';
+        resultObj.winner = 'computer';
+        resultObj.winningChoice = 'rock';
+        resultObj.losingChoice = 'fireball';
+        resultObj.wonBy = 'blocks';
       } else if (compChoice === 'paper') {
-        resultStatement = 'player wins, fireball burns paper';
+        resultObj.winner = 'player';
+        resultObj.winningChoice = 'fireball';
+        resultObj.losingChoice = 'paper';
+        resultObj.wonBy = 'burns';
       } else {
-        resultStatement = 'Draw, both chose fireball.';
+        resultObj.winner = 'Draw, neither side';
+        resultObj.winningChoice = 'fireball';
+        resultObj.losingChoice = 'fireball';
+        resultObj.wonBy = 'matches';
       }
       break;
     default:
-      console.log('ERROR: Unexpected selection passed!', playerChoice);
+      resultObj.winner = 'error';
+      resultObj.winningChoice = 'error';
+      resultObj.message = function () {
+        return 'Try again, ' + playerChoice + ' is not a valid choice. Please enter "rock", "paper" or "fireball".';
+      };
   }
 
-  return resultStatement;
+  return resultObj;
 }
 
 function generate () {

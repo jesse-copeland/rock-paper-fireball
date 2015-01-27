@@ -19,7 +19,7 @@ html {
 body {
   height: 100%;
   padding: 0 4.6875% 1rem;
-  color: #dadada;
+  color: #146b8e;
   overflow: auto;
   -webkit-overflow-scrolling: touch;
 }
@@ -33,22 +33,27 @@ body {
   width: 100%;
   max-width: 500px;
   min-height: 400px;
-  margin: 3em auto;
+  margin: 1em auto;
+  padding: 3em;
   background: url(../images/congruent_pentagon.png) repeat, #053064;
 }
 
 .game-title {
   text-align: center;
+  padding: 1em;
+  background: #748085;
 }
 
 .hidden {
   display: none;
 }
 
-.results {
-  height: 200px;
+#results {
   width: 100%;
   text-align: center;
+  background: #748085;
+  padding: 1em;
+  margin-top: 1em;
 }
 
 #mocha {
@@ -58,4 +63,18 @@ body {
 
 #mocha-stats {
   background: #033207;
+}
+
+label {
+  display: block;
+  text-align: center;
+}
+
+input {
+  margin-left: 10%;
+}
+
+form {
+  background: #748085;
+  padding: 1em;
 }
