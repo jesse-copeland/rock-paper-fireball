@@ -1,15 +1,10 @@
+document.getElementById("PlayerInputForm").addEventListener("submit", processForm);
+var results = document.getElementsById("results");
+results.innerHTML = "Starting text";
 function processForm(e) {
-    if (e.preventDefault) e.preventDefault();
+  if (e.preventDefault) e.preventDefault();
 
-    * do what you want with the form */
-
-    // You must return false to prevent the default form behavior
-    return false;
-}
-
-var form = document.getElementById('my-form');
-if (form.attachEvent) {
-    form.attachEvent("submit", processForm);
-} else {
-    form.addEventListener("submit", processForm);
+  results.innerHTML = "Test text";
+  results.className = "";
+  return false;
 }
