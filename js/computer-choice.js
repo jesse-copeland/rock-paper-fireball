@@ -1,5 +1,6 @@
-module.exports = {
-  generate: function () {
-    console.log('generate() called!');
-  }
-};
+function generate () {
+  console.log("generate() called!");
+
+  return Math.floor(Math.random() * 3);
+}
+
